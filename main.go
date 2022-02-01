@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	"github.com/Knetic/govaluate"
+	"github.com/xwzy/godan/time_meter"
 )
-
 
 func main() {
 	Test01()
 	Test02()
 	Test03()
+	Test04()
 }
 
 func Test01() {
@@ -56,5 +57,13 @@ func Test04() {
 	parameters["http_response_body"] = "service is ok"
 
 	result, err := expression.Evaluate(parameters)
+	fmt.Println(result)
+	if err != nil {
+		panic(err)
+	}
+}
 
+func Test05() {
+
+	
 }
